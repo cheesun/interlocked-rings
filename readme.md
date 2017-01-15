@@ -53,7 +53,6 @@ Running the code
     tested: solve
     { tests: 8, passes: 8, failures: 0 }
 
-Question 3
----------------
+### Question 3
 
 Please see question3.md
