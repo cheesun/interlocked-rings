@@ -6,7 +6,7 @@ To solve the decision problem, I use a top-down dynamic programming algorithm wh
 
 This gives a running time of O(numberOfSums * 2^n) => O(n * 2^n) => O(2^n) which is exponential.
 
-Space used is O(n^2 + 2^n) => O(2^n) which is also exponential:
+Space used is O(n^2 + n^2) => O(n^2) which is also exponential, though to a lesser degree than the time complexity:
 
 * O(n^2) to store the branches (different pairs of numbers that could satisfy the current target sum at that level of the search tree)
 * O(2^n) to store the solution of any particular sub-problem
@@ -37,9 +37,11 @@ I haven't had time to produce a proof for reduction of an existing NP-complete p
 
 If an answer is only needed with high probability, then stochastic and heuristic methods may be able to converge on a likely solution in a reasonable amount of time. I would lean towards simulated annealing as a possible algorithm to pursue.
 
-### Switch to a faster language
+### Switch to a different language
 
 Javascript is not the fastest language - re-implementing in a lower level or just generally faster language would improve the runtime.
+
+In addition, picking a language that supports stackless programming would also prevent stack overflows (the current implementation is stack dependent due to recursion).
 
 ### Parallelize
 
@@ -61,11 +63,11 @@ One example: My current solution already places bounds on the possible sums, bas
 
 ### Switch from top-down to bottom-up dynamic programming
 
-Bottom-up dynamic programming techniques tend to be faster, with reduced stack unwinds and space usage of only O(n^2). I was unable to find a formulation of the bottom-up(generative) algorithm in time provided.
+Bottom-up dynamic programming techniques tend to be faster, with reduced stack unwinds and space usage of only O(n^2). The key is that one needs to find the correct ordering of sub-problems to solve. I was unable to find a formulation of the bottom-up(generative) algorithm in time provided, but it's likely there is one due to the numerical structure.
 
 ### Switch from stack to loop implementation
 
-My current solution is recursive for the sake of clarity. This could be re-implemented as a loop in conjunction with a stack (in Javascript, an array). This would save on memory stack winding and unwinding which is relatively expensive.
+My current solution is recursive for the sake of clarity. This could be re-implemented as a loop in conjunction with a stack (in Javascript, an array). This would save time on memory stack winding and unwinding which is relatively expensive. In addition, it would prevent stack-overflow problems when the problem depth (999 for 500 rings) is deeper than stack depth (machine specific). 
 
 ### Optimize the memo
 
