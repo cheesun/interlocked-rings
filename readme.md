@@ -1,12 +1,12 @@
 Interlocked Rings
-==============
+=================
 
 This package includes my answers to the 3 questions posed in the Interlocked Rings problem.
 
 The code is written in node.js (ES2015) and was developed with v7.4.0. No external dependencies beyond the node standard library are required.
 
 Files
-------
+-----
 
  - readme.md - this file
  - question1.js - outputs the min and max sums for 5 interlocking rings
@@ -17,8 +17,8 @@ Files
  - testing.js - simple test framework
  - interlock.js - brute force implementation used for cross-checking
 
-Output
-----------
+Running the code
+----------------
 
 ### Question 1
 
