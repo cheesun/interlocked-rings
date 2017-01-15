@@ -1,7 +1,7 @@
 Interlocked Rings
 ==============
 
-This package includes my answers to the 3 questions posed in the Interlocked Rings problem from HyperAnna.
+This package includes my answers to the 3 questions posed in the Interlocked Rings problem.
 
 The code is written in node.js (ES2015) and was developed with v7.4.0. No external dependencies beyond the node standard library are required.
 
