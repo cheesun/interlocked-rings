@@ -5,6 +5,14 @@ This package includes my answers to the 3 questions posed in the Interlocked Rin
 
 The code is written in node.js (ES2015) and was developed with v7.4.0. No external dependencies beyond the node standard library are required.
 
+Assumptions
+-----------
+
+ - I assume that no libraries beyond the standard library are allowed
+ - I interpret that to 'get the maximum and minimum value of the sum' is to get the maximum and minimum sums for which there are valid arrangements of the numbers in the rings
+ - I assume that although my program needs to be theoretically able to solve for 50 rings, it doesn't necessarily need to run in a reasonable amount of time
+ - I assume we don't need rigorous error checking beyond what is absolutely necessary
+
 Files
 -----
 
