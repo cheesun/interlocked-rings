@@ -2,7 +2,7 @@
 
 As per my solution, one can approach this problem by scanning over the possible sums and solving the decision problem of whether an arrangement exists. This multiplies the time complexity by O(n) as the number of possible sums is proportional linearly to the number of rings.
 
-To solve the decision problem, I use a top-down dynamic programming algorithm which recursively (depth first) searches for a sub-problem which is known to have a solution. The solution to these sub-problems are memoized which provides some pruning of the search tree. However the running time is still exponential = O(2^n) on the number of rings/positions.
+To solve the decision problem, I use a top-down dynamic programming algorithm which recursively (depth first) searches for a sub-problem which is known to have (or not have) a solution. The solution to these sub-problems are memoized which provides some pruning of the search tree. However the running time is still exponential = O(2^n) on the number of rings/positions.
 
 This gives a running time of O(numberOfSums * 2^n) => O(n * 2^n) => O(2^n) which is exponential.
 
