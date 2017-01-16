@@ -24,7 +24,7 @@ The key problems with the current solution are that both time and space complexi
 
 There is the possibility that there are some niceties about the numerical structure of the problem which would allow a better solution. For example, during testing it was noted that the sum of the odd positions of the solution and the sum of the even positions of the solution always added up to a multiple of the number of rings. This suggests there is more structure to exploit in pruning the tree. Unfortunately, I've not discovered anything consequential so far.
 
-It may even be possible to calculate the minimum and maximum sums without needing to find a solution.
+It may even be possible to calculate the minimum and maximum sums without needing to find an arrangement.
 
 ### Or prove that there isn't one, by reduction from an existing NP-complete or NP-hard problem
 
