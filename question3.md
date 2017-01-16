@@ -59,7 +59,7 @@ It is possible that quantum computers may be able to bring this problem into the
 
 ### Try to exploit the numerical structure of the problem
 
-One example: My current solution already places bounds on the possible sums, based purely on the arithmetic impossibility of achieving a sum smaller than the largest number in the choices or larger than twice the largest number. It may be possible to improve on these bounds, thereby reducing the number of sums we explore. There may also be other properties of the structure which would allow better pruning of the search tree.
+One example: My current solution already places bounds on the possible sums, based purely on the arithmetic impossibility of achieving a sum smaller than the largest number in the choices or larger than twice the largest number. It may be possible to improve on these bounds, thereby reducing the number of sums we explore. There may also be other properties of the structure which would allow better pruning of the search tree or better ordering of branches to try.
 
 ### Switch from top-down to bottom-up dynamic programming
 
@@ -67,7 +67,7 @@ Bottom-up dynamic programming techniques tend to be faster, with reduced stack u
 
 ### Switch from stack to loop implementation
 
-My current solution is recursive for the sake of clarity. This could be re-implemented as a loop in conjunction with a stack (in Javascript, an array). This would save time on memory stack winding and unwinding which is relatively expensive. In addition, it would prevent stack-overflow problems when the problem depth (999 for 500 rings) is deeper than stack depth (machine specific). 
+My current solution is recursive for the sake of clarity. This could be re-implemented as a loop in conjunction with a stack datastructure (in Javascript, an array). This would save time on stack winding and unwinding which is relatively expensive. In addition, it would prevent memory stack-overflow problems when the problem depth (999 for 500 rings) is deeper than stack depth (machine specific). 
 
 ### Optimize the memo
 
